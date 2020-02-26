@@ -18,11 +18,11 @@ def getTotalHours():
 
 def getCsvDataFramesList():
     csvPaths = getCsvPaths()
-    dataFrames = []
+    dataFramesList = []
     for path in csvPaths:
-        dataFrames.append(pandas.read_csv(path))
+        dataFramesList.append(pandas.read_csv(path))
 
-    return dataFrames
+    return dataFramesList
 
 def getCsvPaths():
     allPaths = os.listdir(".")
@@ -37,11 +37,11 @@ def isCsv(path):
     return path.split(".")[-1] == "csv"
 
 def getHours(dataFrame):
-    dataFrame = getDurationAsHoursFloat(dataFrame)
+    dataFrame = setDurationAsHoursFloat(dataFrame)
 
     return dataFrame["Duration"].sum()
 
-def getDurationAsHoursFloat(dataFrame):
+def setDurationAsHoursFloat(dataFrame):
     totalRows = dataFrame.shape[0]
     for i in range(totalRows):
         duration = dataFrame.loc[i, "Duration"]
@@ -50,6 +50,10 @@ def getDurationAsHoursFloat(dataFrame):
         dataFrame.loc[i, "Duration"] = hoursFloat
 
     return dataFrame
+
+
+
+
 
 def getHoursFloat(string):
     # string format: hr:min:s
