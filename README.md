@@ -1,9 +1,9 @@
-# Total Hours Studied
+# Summary
 I was curious about how long I've studied since learning to code. Here's what I did to answer this question:
 - download yearly csvs from [Toggl](https://toggl.com) time tracker
 - write hoursStudied.py to sum them all up
 
-## Reproduce Results
+# Reproduce Results
 
 ```
 ~/Downloads » git clone https://github.com/geofflangenderfer/programmingHoursStudied.git
