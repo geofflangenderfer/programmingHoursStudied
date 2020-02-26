@@ -1,14 +1,14 @@
 # Total Hours Studied
 I was curious about how long I've studied since learning to code. Here's what I did to answer this question:
 - download yearly csvs from [Toggl](https://toggl.com) time tracker
-- write summary.py to sum them all up
+- write hoursStudied.py to sum them all up
 
 ## Reproduce Results
 
 ```
 ~/Downloads » git clone https://github.com/geofflangenderfer/programmingHoursStudied.git
 ~/Downloads » cd programmingHoursStudied
-Downloads/programmingHoursStudied [master●] » python3 summary.py
+Downloads/programmingHoursStudied [master●] » python3 hoursStudied.py
 Yearly Hours: 153.10777777777784
 
 Yearly Hours: 508.90388888888884
