@@ -1,6 +1,6 @@
 # Total Hours Studied
 I was curious about how long I've studied since learning to code. Here's what I did to answer this question:
-- download yearly csvs from Toggl time tracker
+- download yearly csvs from [Toggl](https://toggl.com) time tracker
 - write summary.py to sum them all up
 
 ## Reproduce Results
