@@ -56,8 +56,8 @@ def getHoursFloat(string):
     partsAsFloats = [float(part) for part in string.split(":")]
     return \
             partsAsFloats[0] \
-            + partsAsFloats[0] / 60 \
-            + partsAsFloats[0] / (60*60)
+            + partsAsFloats[1] / 60 \
+            + partsAsFloats[2] / (60*60)
 
 if __name__ == "__main__":
     main()
