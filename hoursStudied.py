@@ -56,7 +56,7 @@ def setDurationAsHoursFloat(dataFrame):
 
 
 def getHoursFloat(string):
-    # string format: hr:min:s
+    # string format: "<hr>:<min>:<sec>"
     partsAsFloats = [float(part) for part in string.split(":")]
     return \
             partsAsFloats[0] \
