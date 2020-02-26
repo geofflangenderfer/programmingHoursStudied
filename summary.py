@@ -5,7 +5,7 @@ from datetime import datetime
 
 def main():
     totalHours = getTotalHours()
-    print(totalHours)
+    print("Overall:", totalHours)
 
 def getTotalHours():
     csvDataFramesList = getCsvDataFramesList()
@@ -18,8 +18,8 @@ def getTotalHours():
     return total
 
 def printDetails(dataFrame, hours):
-    print("Snapshot:\n", dataFrame.head(), "\n")
-    print("Total Hours:", hours, "\n")
+    #print("Snapshot:\n", dataFrame.head(), "\n")
+    print("Yearly Hours:", hours, "\n")
 
 def getCsvDataFramesList():
     csvPaths = getCsvPaths()
