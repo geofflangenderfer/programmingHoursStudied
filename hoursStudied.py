@@ -37,11 +37,11 @@ def isCsv(path):
     return path.split(".")[-1] == "csv"
 
 def getHours(dataFrame):
-    dataFrame = setDurationAsHoursFloat(dataFrame)
+    dataFrame = getDurationAsHoursFloat(dataFrame)
 
     return dataFrame["Duration"].sum()
 
-def setDurationAsHoursFloat(dataFrame):
+def getDurationAsHoursFloat(dataFrame):
     totalRows = dataFrame.shape[0]
     for i in range(totalRows):
         duration = dataFrame.loc[i, "Duration"]
