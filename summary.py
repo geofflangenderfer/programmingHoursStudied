@@ -11,13 +11,10 @@ def getTotalHours():
     total = 0
     for dataFrame in csvDataFramesList:
         hours = getHours(dataFrame)
-        printDetails(dataFrame, hours)
+        print("Yearly Hours:", hours, "\n")
         total += hours
 
     return total
-
-def printDetails(dataFrame, hours):
-    print("Yearly Hours:", hours, "\n")
 
 def getCsvDataFramesList():
     csvPaths = getCsvPaths()
