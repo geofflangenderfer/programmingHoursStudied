@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import pandas
 import os
-from datetime import datetime
 
 def main():
     totalHours = getTotalHours()
@@ -18,7 +17,6 @@ def getTotalHours():
     return total
 
 def printDetails(dataFrame, hours):
-    #print("Snapshot:\n", dataFrame.head(), "\n")
     print("Yearly Hours:", hours, "\n")
 
 def getCsvDataFramesList():
