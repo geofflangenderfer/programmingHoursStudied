@@ -48,9 +48,8 @@ def getHours(dataFrame):
 def setDurationAsHoursFloat(dataFrame):
     totalRows = dataFrame.shape[0]
     for i in range(totalRows):
-        duration = dataFrame.loc[i, "Duration"]
-        hoursFloat = getHoursFloat(duration)
-
+        durationString = dataFrame.loc[i, "Duration"]
+        hoursFloat = getHoursFloat(durationString)
         dataFrame.loc[i, "Duration"] = hoursFloat
 
     return dataFrame
@@ -65,5 +64,3 @@ def getHoursFloat(string):
 
 if __name__ == "__main__":
     main()
-
-
