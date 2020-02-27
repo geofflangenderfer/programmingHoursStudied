@@ -40,9 +40,6 @@ def getCsvPaths():
     
     return csvPaths
 
-def isCsv(path):
-    return path.split(".")[-1] == "csv"
-
 def getHours(dataFrame):
     dataFrame = setDurationAsHoursFloat(dataFrame)
 
@@ -57,10 +54,6 @@ def setDurationAsHoursFloat(dataFrame):
         dataFrame.loc[i, "Duration"] = hoursFloat
 
     return dataFrame
-
-
-
-
 
 def getHoursFloat(string):
     # string format: "<hr>:<min>:<sec>"
