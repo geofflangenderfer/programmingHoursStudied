@@ -3,22 +3,24 @@ import pandas
 import os
 import math
 
-def testGetTotalHours():
-    assert abs(getTotalHours() - 1851.729444444444) < .0001
 
 def main():
-    totalHours = getTotalHours()
-    print("Overall:", totalHours)
+    yearlyHoursList = getYearlyHoursList()
+    printDetails(yearlyHoursList)
 
-def getTotalHours():
+def printDetails(hourList):
+    for hours in hourList:
+        print("Yearly Hours: ", hours)
+    print("Overall Hours:", sum(hourList))
+
+def getYearlyHoursList():
     csvDataFramesList = getCsvDataFramesList()
-    total = 0
+    yearlyHoursList = []
     for dataFrame in csvDataFramesList:
         hours = getHours(dataFrame)
-        print("Yearly Hours:", hours, "\n")
-        total += hours
+        yearlyHoursList.append(hours)
 
-    return total
+    return yearlyHoursList
 
 def getCsvDataFramesList():
     csvPaths = getCsvPaths()
@@ -70,6 +72,5 @@ def getHoursFloat(string):
 
 if __name__ == "__main__":
     main()
-    #testGetTotalHours()
 
 
