@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 import pandas
 import os
+import math
+
+def testGetTotalHours():
+    assert abs(getTotalHours() - 1851.729444444444) < .0001
 
 def main():
     totalHours = getTotalHours()
@@ -25,11 +29,12 @@ def getCsvDataFramesList():
     return dataFramesList
 
 def getCsvPaths():
-    allPaths = os.listdir(".")
+    csvFolder = "csvs"
+    csvNames = os.listdir(csvFolder)
     csvPaths = []
-    for path in allPaths:
-        if isCsv(path):
-            csvPaths.append(path)
+    for name in csvNames:
+        path = os.path.join(csvFolder, name)
+        csvPaths.append(path)
     
     return csvPaths
 
@@ -65,4 +70,6 @@ def getHoursFloat(string):
 
 if __name__ == "__main__":
     main()
+    #testGetTotalHours()
+
 
