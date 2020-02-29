@@ -5,6 +5,10 @@ I was curious about how long I've studied since learning to code. Here's what I 
 
 # Reproduce Results
 
+- git clone https://github.com/geofflangenderfer/programmingHoursStudied.git
+- cd programmingHoursStudied
+- python3 hoursStudied.py
+
 ```
 ~/Downloads » git clone https://github.com/geofflangenderfer/programmingHoursStudied.git
 ~/Downloads » cd programmingHoursStudied
